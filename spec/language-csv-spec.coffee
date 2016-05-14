@@ -57,3 +57,15 @@ describe 'CSV file grammars should tokenize when', ->
     expect(tokens[i++]).toEqual value: '"', scopes: ['text.csv', 'string.cell.csv', 'variable.ending.csv']
     expect(tokens[i++]).toEqual value: '', scopes: ['text.csv', 'string.cell.csv']
     expect(i).toBe 15
+
+  it 'contains numeric cells', ->
+    {tokens} = grammar.tokenizeLine '42,foobar,6'
+    expect(tokens).toHaveLength 6
+    i = 0
+    expect(tokens[i++]).toEqual value: '42', scopes: ['text.csv', 'constant.numeric.cell.csv']
+    expect(tokens[i++]).toEqual value: ',', scopes: ['text.csv', 'constant.character.separator.csv']
+    expect(tokens[i++]).toEqual value: 'foobar', scopes: ['text.csv', 'string.cell.csv']
+    expect(tokens[i++]).toEqual value: ',', scopes: ['text.csv', 'constant.character.separator.csv']
+    expect(tokens[i++]).toEqual value: '6', scopes: ['text.csv', 'constant.numeric.cell.csv']
+    expect(tokens[i++]).toEqual value: '', scopes: ['text.csv', 'string.cell.csv']
+    expect(i).toBe 6
