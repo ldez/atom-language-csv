@@ -1,15 +1,14 @@
-# https://tools.ietf.org/html/rfc4180
-name: 'CSV'
-scopeName: 'text.csv'
+name: 'CSV semicolon'
+scopeName: 'text.csv.semicolon'
 fileTypes: [
-  'csv'
+  'CSV-SEMICOLON'
 ]
 patterns: [
   name: 'constant.character.separator.csv'
-  match: ','
+  match: ';'
 ,
   name: 'constant.numeric.cell.csv'
-  match: '((?<=,|^)[[^",]&&[\\d.]]+(?=,|$))|(")((?:[[^"]&&[\\d.]]|"")*)(")'
+  match: '((?<=;|^)[[^";]&&[\\d.]]+(?=;|$))|(")((?:[[^"]&&[\\d.]]|"")*)(")'
   captures:
     2: name: 'variable.begin.csv'
     3:
@@ -21,7 +20,7 @@ patterns: [
     4: name: 'variable.ending.csv'
 ,
   name: 'string.cell.csv'
-  match: '([^",]+)|(")((?:[^"]|"")*)(")'
+  match: '([^";]+)|(")((?:[^"]|"")*)(")'
   captures:
     2: name: 'variable.begin.csv'
     3:
