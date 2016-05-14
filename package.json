@@ -1,0 +1,16 @@
+{
+  "name": "language-csv",
+  "version": "0.0.1",
+  "description": "Syntax highlighting for CSV files.",
+  "keywords": [
+    "csv"
+  ],
+  "repository": "https://github.com/ldez/atom-language-csv.git",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "devDependencies": {
+    "coffeelint": "^1.15.0"
+  }
+}
