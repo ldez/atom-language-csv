@@ -14,7 +14,7 @@ Adds syntax highlighting to '.csv' files.
 
 Settings/Preferences > Install > Search for `language-csv`
 
-Or
+or
 
 ```bash
 apm install language-csv
