@@ -10,6 +10,8 @@ Adds syntax highlighting to '.csv' files.
 
 ![language-csv](https://cloud.githubusercontent.com/assets/5674651/15268371/50fe90c4-19dc-11e6-8cff-6d59b637b02e.png)
 
+Support [rfc4180](https://tools.ietf.org/html/rfc4180) and semicolon base syntax.
+
 ## Install
 
 Settings/Preferences > Install > Search for `language-csv`
