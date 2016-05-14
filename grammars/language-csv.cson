@@ -8,7 +8,7 @@ patterns: [
   match: ','
 ,
   name: 'constant.numeric.cell.csv'
-  match: '([[^",]&&\\d]+)|(")((?:[[^"]&&\\d]|"")*)(")'
+  match: '((?<=,|^)[[^",]&&[\\d.]]+(?=,|$))|(")((?:[[^"]&&[\\d.]]|"")*)(")'
   captures:
     2: name: 'variable.begin.csv'
     3:
