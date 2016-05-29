@@ -17,7 +17,7 @@ cd "$TRAVIS_BUILD_DIR"
 ## Prevent publish on tags
 CURRENT_TAG=$(git tag --contains HEAD)
 
-if [ -z "${STOP_PUBLISH}" ] && [ "$TRAVIS_OS_NAME" = "linux" ] && [ "$ATOM_CHANNEL" = "stable" ] && [ "$TRAVIS_BRANCH" = "$AUTHORIZED_BRANCH" ] && [ -z "$CURRENT_TAG" ] && [ "$TRAVIS_PULL_REQUEST" = "false" ]
+if [ -n "${PUBLISH}" ] && [ "$TRAVIS_OS_NAME" = "linux" ] && [ "$ATOM_CHANNEL" = "stable" ] && [ "$TRAVIS_BRANCH" = "$AUTHORIZED_BRANCH" ] && [ -z "$CURRENT_TAG" ] && [ "$TRAVIS_PULL_REQUEST" = "false" ]
 then
   echo 'Publishing...'
 else
@@ -26,7 +26,7 @@ else
 fi
 
 ## Git configuration
-git config --global user.email ${USER_EMAIL}
+git config --global user.email "${USER_EMAIL}"
 git config --global user.name "${USER_NAME}"
 
 ## Loading SSH key
@@ -39,7 +39,7 @@ ssh-add ~/.ssh/${SSH_KEY_NAME}
 ## Change origin url to use SSH
 git remote set-url origin ${GIT_REPOSITORY}
 
-## Force checkout master branch (because Travis use a detached head)
+## Force checkout master branch (because Travis uses a detached head)
 git checkout ${AUTHORIZED_BRANCH}
 
 ## Publish
