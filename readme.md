@@ -2,8 +2,8 @@
 
 [![Atom Package](https://img.shields.io/apm/v/language-csv.svg)](https://atom.io/packages/language-csv)
 [![Atom Package Downloads](https://img.shields.io/apm/dm/language-csv.svg)](https://atom.io/packages/language-csv)
-[![Build Status](https://travis-ci.org/ldez/atom-language-csv.svg?branch=master)](https://travis-ci.org/ldez/atom-language-csv)
-[![Build status](https://ci.appveyor.com/api/projects/status/jpw2ka92nnpa8ksw?svg=true)](https://ci.appveyor.com/project/ldez/atom-language-csv)
+[![Build Status (Linux & OSX)](https://travis-ci.org/ldez/atom-language-csv.svg?branch=master)](https://travis-ci.org/ldez/atom-language-csv)
+[![Build status (Windows)](https://ci.appveyor.com/api/projects/status/jpw2ka92nnpa8ksw?svg=true)](https://ci.appveyor.com/project/ldez/atom-language-csv)
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/ldez/atom-language-csv/blob/master/LICENSE.md)
 
 Adds syntax highlighting to '.csv' files.
